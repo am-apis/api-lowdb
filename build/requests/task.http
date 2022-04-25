@@ -1,0 +1,113 @@
+
+//  Componentes Generales
+/**
+ * @swagger
+ *  components:
+ *      schemas:
+ *          Task: 
+ *              type: object
+ *              properties:
+ *                  id:
+ *                      type: string
+ *                      description: the auto-generated id of task
+ *                  name:
+ *                      type: string
+ *                      description: the name of the task
+ *                  description: 
+ *                      type: string
+ *                      description: the description of the task
+ *              required:
+ *                  - name
+ *                  - description
+ *              example:
+ *                  id: uYfKuRLU2XsuPosT9Uq4C
+ *                  name: One Task to do
+ *                  description: I have to make this task
+ *          TaskNotFound:
+ *              type: object
+ *              properties:
+ *                  msg:
+ *                      type: string
+ *                      description: a message for the not found task
+ *              example:
+ *                  msg: Task was not found
+ *      parameters:
+ *          taskId:
+ *              in: path
+ *              name: id
+ *              require: true
+ *              schema:
+ *                  type: string
+ *              description: the task id
+ *               
+ */
+
+
+
+### Create a Task
+POST http://localhost:3000/tasks
+content-Type: application/json
+
+{
+    "name": "Necesito subir una API",
+    "description": "una API funcional a mi porfolio"
+}
+
+### Updated a Task by :id
+PUT http://localhost:3000/tasks/UUTqvbPAtPWJ_m41bRq14
+content-Type: application/json
+
+{
+    "name": "Subir una API a mi web",
+    "description": "descripcion actualizada" 
+}
+
+### Deleting a task by :id
+DELETE http://localhost:3000/tasks/uYfKuRLU2XsuPosT9Uq4C
+
+
+
+### Get all Tasks
+GET http://localhost:3000/tasks
+
+/**
+ *  @swagger
+ * tags:
+ *  name: Tasks
+ *  description: Tasks endpoint
+ */
+
+
+/**
+ * @swagger
+ * /tasks:
+ *      get:
+ *          summary: Return a task list
+ *          tags: [Tasks]
+ *          responses:
+ *              200:
+ *                  description: the list of task
+ *                  content:
+ *                      aplication/json:
+ *                          schema:
+ *                              type: array
+ *                              items:
+ *                                  $ref: '#/components/schemas/Task'
+ *                                  
+ */
+
+
+
+### Get one Task by :id
+GET http://localhost:3000/tasks/UUTqvbPAtPWJ_m41bRq14
+
+
+
+
+
+
+
+
+### Count all Tasks
+
+GET http://localhost:3000/tasks/count

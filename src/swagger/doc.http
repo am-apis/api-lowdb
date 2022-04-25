@@ -1,0 +1,226 @@
+###
+/**
+ * @swagger
+ *  components:
+ *      schemas:
+ *          Task: 
+ *              type: object
+ *              properties:
+ *                  id:
+ *                      type: string
+ *                      description: the auto-generated id of task
+ *                  name:
+ *                      type: string
+ *                      description: the name of the task
+ *                  description: 
+ *                      type: string
+ *                      description: the description of the task
+ *              required:
+ *                  - name
+ *                  - description
+ *              example:
+ *                  id: uYfKuRLU2XsuPosT9Uq4C
+ *                  name: One Task to do
+ *                  description: I have to make this task
+ *          TaskNotFound:
+ *              type: object
+ *              properties:
+ *                  msg:
+ *                      type: string
+ *                      description: a message for the not found task
+ *              example:
+ *                  msg: Task was not found
+ *      parameters:
+ *          taskId:
+ *              in: path
+ *              name: id
+ *              require: true
+ *              schema:
+ *                  type: string
+ *              description: the task id
+ *               
+ */
+
+###  CREATE A TASK
+POST http://localhost:3000/tasks
+
+content-Type: application/json
+{
+    "name":"NEW TASK",
+    "description": "TASK FRON REST API PLUGING"
+}
+
+
+/**
+ * @swagger
+ * /tasks:
+ *  post:
+ *      summary: CREATE A TASK
+ *      tags: [Tasks]
+ *      requestBody:
+ *          required: true
+ *          content:
+ *              aplication/json:
+ *                  schema:
+ *                      $ref: '#/components/schemas/Task'
+ *      responses:
+ *          200:
+ *              description: the task succesfully created
+ *              content:
+ *                  aplication/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/Task'
+ *          500:
+ *              description: some server error
+ *                                  
+ */
+
+
+### UPDATE A TASK BY ID
+PUT http://localhost:3000/tasks/vl7ht777SgMKaXDCgxIFR
+
+Content-Type: application/json
+{
+    "name":"MAKE NEW",
+    "description": "TO NOW"
+}
+
+/**
+ * @swagger
+ * /tasks/{id}:
+ *  put:
+ *      summary: UPDATE A TASK BT ID
+ *      tags: [Tasks]
+ *      parameters:
+ *          - $ref: '#/components/parameters/taskId'
+ *      requestBody:
+ *          required: true
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                      $ref: '#/components/schemas/Task'
+ *      responses:
+ *          200:
+ *              description: the task was updated
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/Task'
+ *          404:
+ *              description: the task was not found
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/TaskNotFound'
+ */
+
+
+### DELETE A TASK
+DELETE http://localhost:3000/tasks/0KuP1Rmu3e2HjE9v9iwq0
+
+/**
+ * @swagger
+ * /tasks/{id}:
+ *  delete:
+ *      summary: DELETE A TASK
+ *      tags: [Tasks]
+ *      parameters:
+ *          - $ref: '#/components/parameters/taskId'
+ *      responses:
+ *          200:
+ *              description: the task was deleted
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/Task' 
+ *          404:
+ *              description: the task was not found
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/TaskNotFound'
+ */
+
+
+
+
+###  GET ALL TASK
+GET http://localhost:3000/tasks
+
+/**
+ *  @swagger
+ * tags:
+ *  name: Tasks
+ *  description: Tasks endpoint
+ */
+
+/**
+ * @swagger
+ * /tasks:
+ *      get:
+ *          summary: GET ALL TASK
+ *          tags: [Tasks]
+ *          responses:
+ *              200:
+ *                  description: Return the list of all tasks
+ *                  content:
+ *                      aplication/json:
+ *                          schema:
+ *                              type: array
+ *                              items:
+ *                                  $ref: '#/components/schemas/Task'
+ *                                  
+ */
+
+###  GET TOTAL TASKS COUNT
+GET http://localhost:3000/tasks/count
+
+/**
+ * @swagger
+ * /tasks/count:
+ *      get:
+ *          summary: GET TOTAL TASKS COUNT
+ *          tags: [Tasks]
+ *          responses:
+ *              200:
+ *                  description: the total number of task
+ *                  content:
+ *                      text/plain:
+ *                          schemas:
+ *                              type: integer
+ *                              example: 10
+ */
+
+
+###  GET A TASK BY ID
+GET http://localhost:3000/tasks/0YhJdhRVTuKb-kk-JV8w3
+
+/**
+ * @swagger
+ * /tasks/{id}:
+ *  get:
+ *      summary: GET A TASK BY ID
+ *      tags: [Tasks]
+ *      parameters:
+ *          - $ref: '#/components/parameters/taskId'
+ *      responses:
+ *          200:
+ *              description: the task was found
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/Task'
+ *          400:
+ *              description: the task was not found
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/TaskNotFound'
+ */
+
+
+
+
+
+
+

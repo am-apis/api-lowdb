@@ -1,0 +1,67 @@
+### Create a Task
+POST http://localhost:3000/tasks
+content-Type: application/json
+
+{
+    "name": "Necesito subir una API",
+    "description": "una API funcional a mi porfolio"
+}
+
+### Updated a Task by :id
+PUT http://localhost:3000/tasks/UUTqvbPAtPWJ_m41bRq14
+content-Type: application/json
+
+{
+    "name": "Subir una API a mi web",
+    "description": "descripcion actualizada" 
+}
+
+### Deleting a task by :id
+DELETE http://localhost:3000/tasks/uYfKuRLU2XsuPosT9Uq4C
+
+
+
+### Get all Tasks
+GET http://localhost:3000/tasks
+
+/**
+ *  @swagger
+ * tags:
+ *  name: Tasks
+ *  description: Tasks endpoint
+ */
+
+
+/**
+ * @swagger
+ * /tasks:
+ *      get:
+ *          summary: Return a task list
+ *          tags: [Tasks]
+ *          responses:
+ *              200:
+ *                  description: the list of task
+ *                  content:
+ *                      aplication/json:
+ *                          schema:
+ *                              type: array
+ *                              items:
+ *                                  $ref: '#/components/schemas/Task'
+ *                                  
+ */
+
+
+
+### Get one Task by :id
+GET http://localhost:3000/tasks/UUTqvbPAtPWJ_m41bRq14
+
+
+
+
+
+
+
+
+### Count all Tasks
+
+GET http://localhost:3000/tasks/count
