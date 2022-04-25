@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "homepage": "https://am-apis.github.io/api-lowdb/",
     "scripts": {
         "build": "tsc",
         "dev": "nodemon",
-        "start": "node build/index.js"
+        "start": "node build/index.js",
+        "deploy": "gh-pages -d build"
     },
     "keywords": [],
     "author": "Ariel Martin",
