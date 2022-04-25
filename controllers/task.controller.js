@@ -12,6 +12,7 @@ exports.getTasks = getTasks;
 // CREATE A TASK
 const createTask = (req, res) => {
     const { name, description } = req.body;
+    //res.send(req.body)
     const newTask = {
         name,
         description,
