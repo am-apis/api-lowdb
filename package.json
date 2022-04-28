@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "homepage": "https://am-apis.github.io/api-lowdb/",
+    "homepage": "",
     "scripts": {
         "build": "tsc",
         "dev": "nodemon",

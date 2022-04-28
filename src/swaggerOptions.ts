@@ -4,11 +4,11 @@ export const options = {
         info: {
             title: 'Task API',
             version: '1.0.0',
-            description: 'A simple express typescript library API'
+            description: 'A express typescript library API'
         },
         servers: [
             {
-                url: "http://localhost:3000"
+                url: "https://api-lowdb.arielmartin3.repl.co"
             }
         ]
     },
