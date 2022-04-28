@@ -1,3 +1,5 @@
+### @URI = https://replit.com/@ArielMartin3/api-lowdb
+
 ###
 /**
  * @swagger
@@ -42,7 +44,7 @@
  */
 
 ###  CREATE A TASK
-POST http://localhost:3000/tasks
+POST https://replit.com/@ArielMartin3/api-lowdb/tasks
 
 content-Type: application/json
 {
@@ -89,7 +91,7 @@ Content-Type: application/json
  * @swagger
  * /tasks/{id}:
  *  put:
- *      summary: UPDATE A TASK BT ID
+ *      summary: UPDATE A TASK BY ID
  *      tags: [Tasks]
  *      parameters:
  *          - $ref: '#/components/parameters/taskId'
@@ -145,7 +147,7 @@ DELETE http://localhost:3000/tasks/0KuP1Rmu3e2HjE9v9iwq0
 
 
 ###  GET ALL TASK
-GET http://localhost:3000/tasks
+GET https://replit.com/@ArielMartin3/api-lowdb/tasks
 
 /**
  *  @swagger
