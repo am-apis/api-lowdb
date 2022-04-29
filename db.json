@@ -1,42 +1,38 @@
 {
   "tasks": [
     {
-      "name": "Subir una API a mi web",
-      "description": "Debo subir una API funcional a mi porfolio",
+      "name": "REST API Mercado Libre",
+      "description": "Desarrollar API que se conecte a Mercado Libre",
       "id": "6O3gOD_UQtLm1b6kNnXNq"
     },
     {
-      "name": "Subir una API a mi web",
-      "description": "descripcion actualizada",
+      "name": "REST API PostGres",
+      "description": "REST API que exponga datos de BD PostGres",
       "id": "UUTqvbPAtPWJ_m41bRq14"
     },
     {
-      "name": "Necesito subir una API",
-      "description": "una API funcional a mi porfolio",
+      "name": "FrontEnd API Mercado Libre",
+      "description": "Desarrollar FrontEnd que consuma los datos de la api de ML",
       "id": "r-tuNWUQ6AN5CLXckuD2u"
     },
     {
-      "name": "Necesito subir una API",
-      "description": "una API funcional a mi porfolio",
+      "name": "BackEnd E-Commerce",
+      "description": "Desarrollar BackEnd para Fornt de E-Commerce",
       "id": "FQBH4e-vuCIt-RbO7j4Cc"
     },
     {
-      "name": "Necesito subir una API",
-      "description": "una API funcional a mi porfolio",
+      "name": "Modulo de Seguridad",
+      "description": "Desarrollar modulo de seguridad con PassPort para API",
       "id": "xXseQkNQPqAU87tkVi7ty"
     },
     {
-      "name": "Ariel",
-      "id": "I2cClgj09np2Iq5FmUwPf"
-    },
-    {
-      "name": "NEW TASKS",
-      "description": "THIS IS FRON POSTMAN",
+      "name": "Landing Page",
+      "description": "Desarrollar LAndig Page para empresa de Marketing Digital",
       "id": "LbZJVorjcNvI6OGzyMBFl"
     },
     {
-      "name": "NEW TASKS",
-      "description": "THIS IS FRON POSTMAN",
+      "name": "Control Nutricional",
+      "description": "Hostear APP JAVA de control de peso ",
       "id": "KM1KeBTPJ_v5H5--Hx8bF"
     }
   ]

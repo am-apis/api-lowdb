@@ -7,7 +7,7 @@ exports.options = {
         info: {
             title: 'Task API',
             version: '1.0.0',
-            description: 'A express typescript library API'
+            description: 'A Node.JS express typescript API library  with lowBD as DataBase, swagger for Documentation and hosted in replit'
         },
         servers: [
             {
